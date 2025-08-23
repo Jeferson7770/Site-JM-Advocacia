@@ -3,6 +3,8 @@ body {
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
+    position: relative;
+
 }
 
 .navbar {
@@ -12,6 +14,12 @@ body {
 .nav .nav-link {
     color: #3B3A3A;
 }
+
+.navbar-nav .nav-item {
+    margin: 0 0.5rem;
+    /* espaço entre os itens */
+}
+
 
 .nav-link:hover {
     background-color: #bf7e7e;
@@ -26,6 +34,94 @@ body {
 .navbar-nav .nav-link.active {
     color: #fff;
     background-color: #8B0000;
+}
+
+@media (max-width: 376px) {
+
+    /* Links do menu */
+    .navbar-nav .nav-link {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    /* Espaçamento entre os itens */
+    .navbar-nav .nav-item {
+        margin: 0.2rem 0;
+    }
+
+    /* Navbar collapse mais justo */
+    .navbar-collapse {
+        padding: 0.25rem 0;
+    }
+
+    /* Botão toggler ainda menor */
+    .navbar-toggler {
+        padding: 0.2rem 0.4rem;
+        font-size: 0.8rem;
+    }
+
+}
+
+@media (max-width: 344px) {
+    #cabecalho h1.navbar-brand.section-title {
+        font-size: 1.8rem !important;
+        line-height: 1.1;
+        letter-spacing: 0;
+        margin: 0;
+    }
+
+    #cabecalho h1.navbar-brand.section-title .text-colored {
+        font-size: 1.8rem !important;
+        letter-spacing: 0;
+    }
+
+    #cabecalho .navbar-toggler {
+        padding: 0.15rem 0.35rem;
+        font-size: 0.8rem;
+    }
+}
+
+
+/* Espaçamento dos links no menu mobile */
+@media (max-width: 991.98px) {
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem;
+        /* espaço dentro do link */
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0.5rem 0;
+        /* espaço entre cada item */
+        text-align: center;
+    }
+}
+
+/* Espaçamento dos links no menu desktop */
+@media (min-width: 992px) {
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1.5rem;
+    }
+
+    .navbar-nav .nav-item {
+        margin: 0 0.5rem;
+        text-align: center;
+
+    }
+}
+
+
+
+section {
+    scroll-margin-top: 100px;
+    /* altura do header para que o ScrollSpy funcione corretamente */
+}
+
+@media (max-width: 991.98px) {
+    section {
+        scroll-margin-top: 360px;
+        /* considera altura do navbar colapsado */
+    }
 }
 
 .hero-video {
